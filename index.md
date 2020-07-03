@@ -33,7 +33,10 @@ Programming has become an essential tool for scientists. In chemistry, computer 
 | 1 | Visualizing Hydrogen Atomic Orbitals |
 | 2 | Statistical Analysis of Experimental Data |
 | 3 | Fitting Experimental Data to Models |
-| 4-5 | Chemical Kinetics and Numerical Integration |
+| 4 | Chemical Kinetics and Numerical Integration I |
+| 5 | Chemical Kinetics and Numerical Integration II |
 | 6 | Molecular Structure and Chemical File Formats |
-| 7-8 | Electronic Structure and Computational Chemistry |
-| 9-10 | Molecular Dynamics |
+| 7 | Electronic Structure and Computational Chemistry I |
+| 8 | Electronic Structure and Computational Chemistry II |
+| 9 | Molecular Dynamics I |
+| 10 | Molecular Dynamics II |

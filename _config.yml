@@ -26,6 +26,18 @@ github_username:  kncrabtree
 markdown: kramdown
 theme: minima
 
+collections:
+    weeks:
+        output: true
+        
+defaults:
+    -
+        scope:
+            path: ""
+            type: "weeks"
+        values:
+            layout: "week"
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
