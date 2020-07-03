@@ -24,6 +24,9 @@ github_username:  kncrabtree
 
 # Build settings
 markdown: kramdown
+kramdown:
+  math_engine: katex
+  
 theme: minima
 
 collections:

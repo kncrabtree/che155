@@ -27,16 +27,9 @@ Programming has become an essential tool for scientists. In chemistry, computer 
 **Students in the course are expected to have prior experience with Python!** The course assumes knowledge topics covered by a typical introductory Python course, such as Chapters 1-11 of [Automate the Boring Stuff](https://automatetheboringstuff.com/).
 
 ## Schedule
+{% assign week_list = site.weeks | sort: "w","first" %}
 
 | Week(s) | Topics |
 | --- | --- |
-| 1 | Visualizing Hydrogen Atomic Orbitals |
-| 2 | Statistical Analysis of Experimental Data |
-| 3 | Fitting Experimental Data to Models |
-| 4 | Chemical Kinetics and Numerical Integration I |
-| 5 | Chemical Kinetics and Numerical Integration II |
-| 6 | Molecular Structure and Chemical File Formats |
-| 7 | Electronic Structure and Computational Chemistry I |
-| 8 | Electronic Structure and Computational Chemistry II |
-| 9 | Molecular Dynamics I |
-| 10 | Molecular Dynamics II |
+{% for week in week_list %}| {{week.week}} | [{{week.pagetitle}}]({{ week.url | relative_url }}) |
+{% endfor %}
