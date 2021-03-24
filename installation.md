@@ -64,7 +64,7 @@ When asked if you want to activate the conda environment, say yes.
 
 - **Step 4:** Download the environment file with the command
 ```
-wget {{ site.baseurl }}/site/assets/text/environment.yml
+wget https://kncrabtree.github.io/assets/text/environment.yml
 ```
 
 - **Step 5:** Install the conda environment:
@@ -102,7 +102,7 @@ When asked if you want to activate the conda environment, say yes.
 
 - **Step 4:** Download the environment file with the command
 ```
-wget {{ site.baseurl }}/site/assets/text/environment.yml
+wget https://kncrabtree.github.io/assets/text/environment.yml
 ```
 
 - **Step 5:** Install the conda environment:
