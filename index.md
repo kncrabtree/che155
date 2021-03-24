@@ -9,9 +9,9 @@ permalink: /
 ## Spring 2021
 
 - Instructor: [Kyle N. Crabtree](mailto:kncrabtree@ucdavis.edu)
-- Class Info: TBD
-- Office Hours: TBD
-- TA: TBD
+- Class Info: MWF 10:00-10:50 am, online (see Canvas for link)
+- Office Hours: F 11:00-12:00, online (see Canvas for link)
+- TA: [Zach Buchanan](mailto:zsbuchanan@ucdavis.edu)
 
 ## Course Overview and Objectives
 
@@ -25,6 +25,8 @@ Programming has become an essential tool for scientists. In chemistry, computer 
 - Set up and run basic electronic structure and molecular dynamics calculations
 
 **Students in the course are expected to have prior experience with Python!** The course assumes knowledge topics covered by a typical introductory Python course, such as Chapters 1-11 of [Automate the Boring Stuff](https://automatetheboringstuff.com/).
+
+Please see the [Installation](/installation) page for instructions on setting up the Python environment needed for this course.
 
 ## Schedule
 {% assign week_list = site.weeks | sort: "w","first" %}
