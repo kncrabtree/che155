@@ -42,7 +42,7 @@ ln -s /mnt/c/Users/Kyle c
 ```
 replacing `Kyle` with the username on your system. This will create a shortcut named `c`. Run the command `ll` to see that `c` points to the correct folder.
 
-*Note: if you store your files elsewhere, such as an external hard drive, the disk drives that are mounted are available by letter in the `mnt` folder (e.g., `/mnt/d`, `/mnt/e`, etc.). You may create additional links to other drives as needed. The syntax is `ln -s target/folder linkName.*
+*Note: if you store your files elsewhere, such as an external hard drive, the disk drives that are mounted are available by letter in the `mnt` folder (e.g., `/mnt/d`, `/mnt/e`, etc.). You may create additional links to other drives as needed. The syntax is `ln -s target/folder linkName`.*
 
 - **Step 5:** From this point, follow the [Linux instructions](#linux).
 
