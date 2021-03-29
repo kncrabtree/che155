@@ -79,7 +79,7 @@ conda activate che155
 
 - **Step 7:** Install JupyterLab extensions
 ```
-jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib nglview-js-widgets
+jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib nglview-js-widgets jupyterlab-plotly
 ```
 
 Setup is complete! Move on to [Running Jupyter Lab](#running-jupyter-lab).
@@ -117,7 +117,7 @@ conda activate che155
 
 - **Step 7:** Install JupyterLab extensions
 ```
-jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib nglview-js-widgets
+jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib nglview-js-widgets jupyterlab-plotly
 ```
 
 Setup is complete! Move on to [Running Jupyter Lab](#running-jupyter-lab).
