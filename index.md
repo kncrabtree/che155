@@ -11,7 +11,7 @@ permalink: /
 - Instructor: [Kyle N. Crabtree](mailto:kncrabtree@ucdavis.edu)
 - Class Info: MWF 10:00-10:50 am, online (see Canvas for link)
 - Office Hours: F 11:00-12:00, online (see Canvas for link)
-- TA: [Zach Buchanan](mailto:zsbuchanan@ucdavis.edu) Office hours TBD
+- TA: [Zach Buchanan](mailto:zsbuchanan@ucdavis.edu) Office hours T 6-7 pm (see Canvas for link)
 - [CHE 155 Github Repository](https://github.com/kncrabtree/che155)
 
 ## Course Overview and Objectives
