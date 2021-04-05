@@ -64,7 +64,7 @@ When asked if you want to activate the conda environment, say yes.
 
 - **Step 4:** Download the environment file with the command
 ```
-wget https://kncrabtree.github.io/assets/text/environment.yml
+wget https://kncrabtree.github.io/che155/assets/text/environment.yml
 ```
 
 - **Step 5:** Install the conda environment:
@@ -79,7 +79,7 @@ conda activate che155
 
 - **Step 7:** Install JupyterLab extensions
 ```
-jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib nglview-js-widgets
+jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib nglview-js-widgets jupyterlab-plotly
 ```
 
 Setup is complete! Move on to [Running Jupyter Lab](#running-jupyter-lab).
@@ -102,7 +102,7 @@ When asked if you want to activate the conda environment, say yes.
 
 - **Step 4:** Download the environment file with the command
 ```
-wget https://kncrabtree.github.io/assets/text/environment.yml
+wget https://kncrabtree.github.io/che155/assets/text/environment.yml
 ```
 
 - **Step 5:** Install the conda environment:
@@ -117,7 +117,7 @@ conda activate che155
 
 - **Step 7:** Install JupyterLab extensions
 ```
-jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib nglview-js-widgets
+jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib nglview-js-widgets jupyterlab-plotly
 ```
 
 Setup is complete! Move on to [Running Jupyter Lab](#running-jupyter-lab).

@@ -16,6 +16,7 @@ dependencies:
     - pandas
     - pingouin
     - tabulate
+    - scikit-image
     - psi4
     - psi4-rt
     - openmm
