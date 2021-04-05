@@ -1,0 +1,29 @@
+name: che155
+channels:
+    - conda-forge
+    - psi4
+    - rdkit
+    - defaults
+dependencies:
+    - numpy
+    - scipy
+    - python=3.7    
+    - matplotlib
+    - jupyterlab=2
+    - ipympl
+    - ipywidgets
+    - plotly
+    - pandas
+    - pingouin
+    - tabulate
+    - psi4
+    - psi4-rt
+    - openmm
+    - rdkit
+    - openbabel
+    - mdtraj
+    - geometric
+    - networkx
+    - nglview
+    - nodejs
+    
