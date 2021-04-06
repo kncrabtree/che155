@@ -5,16 +5,17 @@ channels:
     - rdkit
     - defaults
 dependencies:
-    - numpy
-    - scipy
+    - numpy>=1.19
+    - scipy>=1.6
     - python=3.7    
     - matplotlib
     - jupyterlab=2
+    - ipyparallel
     - ipympl
     - ipywidgets
     - plotly
-    - pandas
-    - pingouin
+    - pandas>=1.2
+    - pingouin>=0.3.10
     - tabulate
     - scikit-image
     - psi4
@@ -27,4 +28,7 @@ dependencies:
     - networkx
     - nglview
     - nodejs
+    - pip
+    - pip:
+      - tables==3.6.1
     
