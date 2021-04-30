@@ -1,0 +1,116 @@
+####################################################################### 
+# 
+# This file contains crystal structure data downloaded from the 
+# Cambridge Structural Database (CSD) hosted by the Cambridge 
+# Crystallographic Data Centre (CCDC).
+# 
+# Full information about CCDC data access policies and citation 
+# guidelines are available at http://www.ccdc.cam.ac.uk/access/V1 
+# 
+# Audit and citation data items may have been added by the CCDC. 
+# Please retain this information to preserve the provenance of 
+# this file and to allow appropriate attribution of the data. 
+# 
+#######################################################################
+
+data_CIMPRA
+#This CIF has been generated from an entry in the Cambridge Structural Database
+_database_code_depnum_ccdc_archive 'CCDC 1125716'
+_database_code_CSD               CIMPRA
+loop_
+_citation_id
+_citation_doi
+_citation_year
+1 10.1107/S0567740877008966 1977
+_audit_creation_method           'Created from the CSD'
+_audit_update_record             
+;
+2021-04-30 downloaded from the CCDC.
+;
+_database_code_NBS               505881
+_chemical_name_common            'Chlorimipramine hydrochloride'
+_chemical_formula_moiety         'C19 H24 Cl1 N2 1+,Cl1 1-'
+_chemical_name_systematic        
+'3-Chloro-5-(3-dimethylaminopropyl)-10,11-dihydro-5H-dibenz(b,f)azepine hydrochloride'
+_chemical_properties_biological  'antidepressant activity'
+_chemical_absolute_configuration unk
+_diffrn_ambient_temperature      295
+_exptl_crystal_density_diffrn    1.255
+#These two values have been output from a single CSD field.
+_refine_ls_R_factor_gt           0.048
+_refine_ls_wR_factor_gt          0.048
+_diffrn_radiation_probe          x-ray
+_symmetry_cell_setting           monoclinic
+_symmetry_space_group_name_H-M   'P 21/c'
+_symmetry_Int_Tables_number      14
+_space_group_name_Hall           '-P 2ybc'
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 -x,1/2+y,1/2-z
+3 -x,-y,-z
+4 x,1/2-y,1/2+z
+_cell_length_a                   15.506(3)
+_cell_length_b                   8.605(1)
+_cell_length_c                   14.031(4)
+_cell_angle_alpha                90
+_cell_angle_beta                 96.69(2)
+_cell_angle_gamma                90
+_cell_volume                     1859.4
+_cell_formula_units_Z            4
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Cl1 Cl 0.45310 0.28010 0.14710
+Cl2 Cl -0.02190 0.38800 0.30670
+N1 N 0.21200 -0.01310 0.41870
+N2 N 0.44550 0.26780 0.36150
+C1 C 0.09730 0.17570 0.37470
+C2 C 0.03180 0.27260 0.39680
+C3 C 0.00900 0.28120 0.48850
+C4 C 0.05580 0.19170 0.55710
+C5 C 0.17090 0.01440 0.62710
+C6 C 0.25400 -0.07410 0.61440
+C7 C 0.23850 -0.36110 0.57280
+C8 C 0.21770 -0.47950 0.50750
+C9 C 0.19350 -0.44360 0.41330
+C10 C 0.19060 -0.29140 0.38370
+C11 C 0.21170 -0.17170 0.44920
+C12 C 0.23590 -0.20490 0.54580
+C13 C 0.12440 0.09590 0.54040
+C14 C 0.14490 0.08590 0.44480
+C15 C 0.24410 0.01160 0.32540
+C16 C 0.29720 0.15710 0.32110
+C17 C 0.38510 0.14100 0.38110
+C18 C 0.53480 0.23570 0.40700
+C19 C 0.41630 0.42300 0.38990
+H1 H 0.10500 0.17000 0.31200
+H2 H -0.03700 0.35100 0.49900
+H3 H 0.04200 0.19900 0.61700
+H4 H 0.18100 0.08900 0.67200
+H5 H 0.12900 -0.05300 0.65700
+H6 H 0.29400 0.00300 0.58800
+H7 H 0.27900 -0.10900 0.67800
+H8 H 0.25400 -0.37200 0.63000
+H9 H 0.22300 -0.57700 0.53200
+H10 H 0.18000 -0.52900 0.36600
+H11 H 0.17300 -0.26500 0.32100
+H12 H 0.28100 -0.07500 0.31300
+H13 H 0.19500 0.01100 0.27200
+H14 H 0.30500 0.17300 0.25200
+H15 H 0.26500 0.24600 0.34300
+H16 H 0.41600 0.04800 0.36700
+H17 H 0.37900 0.14300 0.45000
+H18 H 0.55100 0.13900 0.38300
+H19 H 0.53600 0.23200 0.48200
+H20 H 0.56400 0.32200 0.39400
+H21 H 0.36100 0.45000 0.35300
+H22 H 0.40700 0.41500 0.45600
+H23 H 0.45800 0.49900 0.37800
+H24 H 0.44200 0.27300 0.29700
+
+#END
