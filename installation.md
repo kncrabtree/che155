@@ -36,11 +36,11 @@ Then restart your computer. Optionally, if your computer supports WSL2, you can 
 ```
 ll /mnt/c/Users
 ```
-and look for the folder that matches your username (mine is `Kyle`). Then create the link with the command
+and look for the folder that matches your username (mine is `leeping`). Then create the link with the command
 ```
-ln -s /mnt/c/Users/Kyle c
+ln -s /mnt/c/Users/leeping c
 ```
-replacing `Kyle` with the username on your system. This will create a shortcut named `c`. Run the command `ll` to see that `c` points to the correct folder.
+replacing `leeping` with the username on your system. This will create a shortcut named `c`. Run the command `ll` to see that `c` points to the correct folder.
 
 *Note: if you store your files elsewhere, such as an external hard drive, the disk drives that are mounted are available by letter in the `mnt` folder (e.g., `/mnt/d`, `/mnt/e`, etc.). You may create additional links to other drives as needed. The syntax is `ln -s target/folder linkName`.*
 
@@ -64,7 +64,7 @@ When asked if you want to activate the conda environment, say yes.
 
 - **Step 4:** Download the environment file with the command
 ```
-wget https://kncrabtree.github.io/che155/assets/text/environment.yml
+wget https://leeping.github.io/che155/assets/text/environment.yml
 ```
 
 - **Step 5:** Install the conda environment:
@@ -102,7 +102,7 @@ When asked if you want to activate the conda environment, say yes.
 
 - **Step 4:** Download the environment file with the command
 ```
-wget https://kncrabtree.github.io/che155/assets/text/environment.yml
+wget https://leeping.github.io/che155/assets/text/environment.yml
 ```
 
 - **Step 5:** Install the conda environment:
