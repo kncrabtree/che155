@@ -71,6 +71,16 @@ wget https://leeping.github.io/che155/assets/text/environment.yml
 ```
 conda env create -f environment.yml
 ```
+Note: This step is known to take a very long time, especially at the `Solving environment...` step.  
+A test run of the installation on your instructor's laptop took around 50 minutes. 
+It is recommended to leave this running in the background. 
+You may try an alternative package manager called `mamba` that is designed to behave the same as `conda` but is faster 
+As of the start of Spring 2022, installing the environment using `mamba` is not as stable as `conda`, but when it works, it takes less than 5 minutes.  
+To use `mamba`, use these commands instead of the above:
+```
+conda install -c conda-forge mamba
+mamba env create -f environment.yml
+```
 
 - **Step 6:** Activate the new `che155` environment:
 ```
