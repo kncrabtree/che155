@@ -1,34 +1,27 @@
 name: che155
 channels:
-    - conda-forge
     - psi4
     - rdkit
+    - conda-forge
     - defaults
 dependencies:
-    - numpy>=1.19
-    - scipy>=1.6
-    - python=3.7    
-    - matplotlib
-    - jupyterlab=2
-    - ipyparallel
-    - ipympl
-    - ipywidgets
-    - plotly
-    - pandas>=1.2
-    - pingouin>=0.3.10
-    - tabulate
-    - scikit-image
-    - psi4
+    - python=3.9
+    - psi4=1.6.1
     - psi4-rt
-    - openmm
     - rdkit
-    - openbabel
-    - mdtraj
-    - geometric
-    - networkx
-    - nglview
-    - nodejs
-    - pip
-    - pip:
-      - tables==3.6.1
-    
+    - numpy>=1.22.3,<1.23.0
+    - scipy>=1.7
+    - matplotlib
+    - jupyterlab
+
+# After environment is created, run the following command to install the other packages:
+# conda install -c conda-forge ipyparallel ipympl 'ipywidgets<8' plotly tabulate networkx scikit-image 'pandas>=1.2' 'pingouin>=0.5' openmm openbabel geometric mdtraj nglview pytables pytorch jax
+# Notes added 2022-09-17:
+# Installing all packages in one go, without specifying psi4 version, could cause psi4 1.4 or 1.5 to be installed.
+# They may cause undefined symbol or segfaults at the import/run stage, so installing those versions is unacceptable.
+# Freeing the Python version number will cause 3.10 to be installed which will lead to conflicts on Mac when installing the second batch.
+# Installing psi4 will sometimes cause a very old version of numpy to be installed. Version pinning ensures it is not too old.
+# scipy 1.7.3 will complain if numpy is newer than 1.22.
+# pingouin older than 0.5 will have a different API that breaks scipy calling ttest notebook in week 2.
+# ipywidgets < 8 is added because nglview will throw AttributeError: 'super' object has no attribute '_ipython_display_' otherwise.
+

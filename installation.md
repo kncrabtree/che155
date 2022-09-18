@@ -6,6 +6,8 @@ permalink: /installation
 
 # Installing a Python Environment
 
+TestTest
+
 This course will use a number of packages that are not included with a standard Python installation. For convenience, these are included in an [environment file]( {{site.baseurl}}/assets/text/environment.yml) that is compatible with the `conda` package manager. If you already have an existing Anaconda or Miniconda installation on your system, you may be able to simply install the new environment and use it (unless your operating system is Windows; more on this below). Alternatively, you can follow the instructions for your operating system below.
 
 *Note:* This environment contains the `psi4` package, which is not available for Windows. If you are using Windows, then you will not be able to use an existing anaconda/miniconda installation, and you will need to follow the instructions below.

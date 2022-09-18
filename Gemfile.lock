@@ -263,7 +263,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (~> 214)
-  jekyll (~> 3.9.0)
   jekyll-feed (~> 0.15.1)
   kramdown (~> 2.3.1)
   minima (~> 2.0)
