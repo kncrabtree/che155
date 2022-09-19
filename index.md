@@ -29,6 +29,8 @@ Programming has become an essential tool for scientists. In chemistry, computer 
 
 **This course includes an introduction to Python programming for those with no prior experience, but it does not fully replace a formal programming course such as ECS 032A.** You are expected to learn the basics of Python by supplementing the tutorial with outside learning. For best results you are encouraged to take a programming course prior to, or concurrently with this one. I also recommend learning Python basics from outside reading such as Chapters 1-11 of [Automate the Boring Stuff](https://automatetheboringstuff.com/).
 
+*Important note:* Maggie Berrens (your TA) is scheduling a tutorial session for Python basics that will take place sometime in the first two weeks of class outside of normal hours. The tutorial will use materials adapted from the [Python Intensive Training course](https://ucdavisdatalab.github.io/python_intensive_training/chapters/index.html) given to incoming graduate students.  If you are new to Python or need a refresher, you should definitely plan on attending!
+
 Please see the [Installation]({{ "installation" | relative_url }}) page for instructions on setting up the Python environment needed for this course.
 
 ## Schedule
