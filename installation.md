@@ -266,6 +266,20 @@ Jupyter Lab is a Python notebook environment that runs in your web browser. The 
 ```
 jupyter lab
 ```
+
+![jupyter_lab]({{ site.baseurl }}/assets/images/installation/jupyter-lab.png){: width="650"}
+
 This will spawn a jupyter server instance and attempt to open your web browser. If it does not do so automatically, it will print a URL that you can copy and paste into your browser manually.
 
+*Note:* The above screenshot shows some warning and error messages. Although they look scary, they don't affect the use of Jupyter Lab (although on my laptop it does not automatically open the browser window). To open the notebook, I only need to visited the highlighted link. 
+
+Over time, you will become attuned to which warning/error messages are important and which ones are irrelevant. It is one of the most important, yet unspoken-of skills on your journey to becoming a programmer.
+
 When you are finished working, it is best to shut down the jupyter server by choosing `File > Shut Down` from the JupyterLab menu. Once you have done so, you can close the browser tab and close out your terminal session if desired.
+
+*Final note:* As most of the instructions on this page refer to installation, you will only need to do them *once*. 
+However, take note of the actions you need to do repeatedly:
+- If you close the terminal or restart your computer, you will need to reopen the terminal.
+- Every time you reopen your terminal, you will need to enter `conda activate che155` to activate your environment.
+- After activating the environment, you will need to enter `jupyter lab` to access your notebooks. If you close the terminal, it will stop the notebook server and the notebooks in your browser will no longer work. 
+- Avoid running `jupyter lab` in multiple terminals (e.g. if you leave one running and start up another one in a different terminal). Having multiple notebook servers running could lead to issues such as file access errors.
