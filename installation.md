@@ -54,6 +54,18 @@ At this point it's best to restart your computer.
 
 ![ubuntu_install]({{ site.baseurl }}/assets/images/installation/windows-install-wsl.png){: width="350"}
 
+Above: Windows PowerShell (top) and Ubuntu terminal (bottom)
+
+**Troubleshooting note:** What if you saw the error message, "The Virtual machine could not be started because a required feature is not installed"?
+
+This error has been observed several times over past years on students' computers and the solution is to enable virtualization in the BIOS (built-in operating system).  To enter the BIOS, restart the computer and press the key indicated on the first startup screen you see; this may be Del F2 or something else (you may only have a few seconds to do so). 
+In the menu that appears, find the Virtualization menu item and enable the virtualization options for your CPU (probably Intel or AMD).
+Then save the settings and exit, and your computer will be rebooted once more. You should no longer see the error when attempting to install WSL.
+
+![bios]({{ site.baseurl }}/assets/images/installation/bios.jpg){: width="550"}
+
+Above: Turning on virtualization on your instructor's laptop
+
 <details closed>
 <summary> What is Ubuntu? I thought we were installing Linux? (click to expand) </summary>
 
