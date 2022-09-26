@@ -10,8 +10,9 @@ permalink: /
 
 - Instructor: [Lee-Ping Wang](mailto:leeping@ucdavis.edu)
 - Class Info: MWF 3:10-4:00 PM, Young 192
-- Office Hours: TBA
-- TA: [Margaret (Maggie) Berrens](mailto:mlberrens@ucdavis.edu) Office hours TBA
+- Office Hours: W 4:10-5:00 PM, Everson 119
+- TA: [Margaret (Maggie) Berrens](mailto:mlberrens@ucdavis.edu)
+- TA Office Hours: M 4:30-5:30 PM, Chemistry 190C
 - [CHE 155 Github Repository](https://github.com/leeping/che155)
 
 ## Course Overview and Objectives
