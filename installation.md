@@ -99,7 +99,7 @@ Using the Settings you can also make Ubuntu the default terminal.
 
 **Step 3:** Familiarize yourself with the WSL filesystem and how it is related to the Windows filesystem.
 
-Your Ubuntu terminal has its own filesystem.  In Linux operating systems the filesystem is a directory tree starting with `/` as the root.  Hard drives can be *mounted* to directories allowing you to interact with their contents. (I will often use the terms "folder" and "directory" interchangeably.)
+Your Ubuntu terminal has its own filesystem.  In Linux operating systems the filesystem is a directory tree starting with `/` as the root.  Hard drives can be *mounted* to directories allowing you to work with their contents. (I will often use the terms "folder" and "directory" interchangeably.)
 The hard drive containing the Windows filesystem is mounted at `/mnt/c/`, and your Windows home folder is located at `/mnt/c/Users/win_username/` where `win_username` is your Windows user name.
 On the other hand, your home folder in Ubuntu is located at `/home/ubuntu_username/` where `ubuntu_username` is what you provided during the installation.
 To access your familiar Windows files, you need navigate to your Windows home directory as follows:
@@ -147,7 +147,7 @@ You can also move all downloaded course-related files into this folder.
 By making sure all your files are in one location, you can avoid the confusion that comes with having files in different places.
 As the folder gets filled up with files, you can create subfolders for different assignments, etc.
 
-**Step 4:** Your WSL / Ubuntu setup is complete. From this point, follow the [MacOS and Linux instructions](#macos-and-linux).
+**Step 4:** Your WSL / Ubuntu setup is complete. From this point, follow the [MacOS and Linux instructions](#macos-and-linux) beginning with Step 1.
 
 ## MacOS and Linux
 
@@ -166,7 +166,7 @@ You may download from the [Miniconda webpage](https://docs.conda.io/en/latest/mi
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 ```
 
-*For Linux*: Download the 64-bit Linux install on the command line using:
+*For Linux or WSL*: Download the 64-bit Linux install on the command line using:
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
