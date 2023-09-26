@@ -43,7 +43,7 @@ Please see the [Installation]({{ "installation" | relative_url }}) page for inst
 {% endfor %}
 
 ## Course Organization
-![organization]({{ site.baseurl }}/assets/images/organization.svg){: width="450"}
+![organization]({{ site.baseurl }}/assets/images/organization.png){: width="450"}
 
 The course resources are organized roughly according to this graphic. 
 This course has a [Canvas page](https://canvas.ucdavis.edu/courses/802399) that you need your UC Davis login to access.
