@@ -1,4 +1,4 @@
-z---
+---
 title: Syllabus
 layout: default
 permalink: /
