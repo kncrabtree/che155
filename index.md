@@ -1,4 +1,4 @@
----
+z---
 title: Syllabus
 layout: default
 permalink: /
@@ -64,8 +64,15 @@ You usually don't need to visit this site as it's mainly for administrative purp
 
 It is expected that students will regularly attend the class sessions and participate in the discussion. In addition, for this class the instructional notebooks are available on the course website, and students should explore these notebooks before class, follow along with the code during class, and ask questions about any code that is unclear.
 
-Grading in the course will be primarily based on 4 coding projects: 3 during the quarter and a final project due during finals week. Projects may be worked on individually or, with permission, in small groups of up to 3 people. However, if working in groups, you may not work with the same person on more than 2 projects. All members of a group are expected to contribute equally. Failure to adequately contribute to a group project could result in a grade penalty and forfeiting the privilege to work in groups on future projects.
-These 4 projects will be worth at least 80% of the course grade.
+Grading in the course will be primarily based on 8 assignments, including a final project due during finals week. The assignments that are designated as "Projects" are worth more points, and may be worked on individually or, with permission, in small groups of up to 3 people. All members of a group are expected to contribute equally. Failure to adequately contribute to a group project could result in a grade penalty and forfeiting the privilege to work in groups on future projects.
 
-Up to 20% of the grade will be based on short coding exercises that can be completed quickly.
-The number of these will be determined as the course proceeds, but there will be no more than 1 brief exercise per week, and they will count equally toward the course grade.
+Assignments are generally due at the end of the week.  The current schedule of assignments is as follows (subject to change):
+
+- Week 1: Working with numbers and strings (the first day of class falls on "Week 0".)
+- Week 2: Creating a grade histogram with Matplotlib
+- Week 3: Creating a molecular orbital diagram
+- Week 5: Least squares fitting of kinetic model
+- Week 6: Spectral processing pipeline using Fast Fourier Transforms (*Project*)
+- Week 7: Introduction to RDKit
+- Week 9: Cheminformatics and Quantum Chemistry (*Project*)
+- Finals Week: Building a Force Field (*Project*)
