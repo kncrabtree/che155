@@ -33,7 +33,6 @@ dependencies:
     - jax
     - pytables>=3.7
     - numexpr>=2.8
-    - cudatoolkit-dev
     - tensorflow
 
 # Notes added 2023-09-25:
@@ -42,7 +41,7 @@ dependencies:
 # Cannot install qcelemental=0.26, which is the first version that does not break when using Pydantic 2.
 # Therefore we force Pydantic version to 1.
 # Pandas 2.1.1 requires tables >= 3.7 and numexpr >= 2.8.
-# Jax requires cudatoolkit-dev in week 10.
+# Jax requires cudatoolkit-dev in week 10. (Removed because I don't teach it.. and the pkg. seems too large)
 # Added TensorFlow.
 # 
 # Notes added 2022-09-17:

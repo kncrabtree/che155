@@ -187,7 +187,26 @@ When asked if you want to activate the conda environment, say yes.
 curl -O https://leeping.github.io/che155/assets/text/environment.yml
 ```
 
-**Step 5:** Create the conda environment:
+**Step 5:** Create the conda environment
+
+*Note:* For several years, the algorithm that Conda uses to solve package dependencies has had a serious problem that it would take extremely long times, making it difficult to use.
+A new algorithm called "mamba" was recently introduced that is significantly faster, but the newest Miniconda release has not changed the default algorithm yet.
+Therefore, the algorithm needs to be changed manually.
+
+First update the Conda base executable:
+```
+conda update -n base conda
+```
+
+Next, install the libmamba solver and activate it:
+```
+conda install -n base conda-libmamba-solver
+conda config --set solver libmamba
+```
+
+The above steps should be relatively fast.
+
+Now create the environment; this is the longest step as it will download and install all of the third-party packages that we will be using in this course.
 ```
 conda env create -f environment.yml
 ```
@@ -196,15 +215,7 @@ The output should look something like this:
 
 <pre>
 Collecting package metadata (repodata.json): done
-Solving environment: done <b>(This could take 10 minutes or more before it shows "done")</b>
-
-==> WARNING: A newer version of conda exists. <==
-  current version: 4.12.0
-  latest version: 4.14.0
-
-Please update conda by running
-
-    $ conda update -n base -c defaults conda
+Solving environment: done <b>(This could take a few minutes, but see me if it takes longer than 10 minutes.)</b>
 
 Downloading and Extracting Packages
 libclang13-14.0.6    | 10.6 MB   | ####################### | 100%
@@ -229,7 +240,6 @@ Executing transaction: done
 #     $ conda deactivate
 </pre>
 
-*Note:* This step is known to take a long time, especially at the `Solving environment...` step.  
 A test run of the installation on several systems took around 10 minutes on average. 
 It is recommended to leave this running in the background; make sure your laptop is plugged in so the battery won't run out. 
 
@@ -240,6 +250,7 @@ conda activate che155
 
 Your prompt should now show `(che155)`.
 
+<!---
 **Step 7:** Install additional packages. Enter the following command into the terminal, making sure to highlight the entire line, copy, and paste as a single line.
 
 ```
@@ -257,6 +268,7 @@ Solving environment: failed with repodata from current_repodata.json, will retry
 Collecting package metadata (repodata.json): done
 Solving environment... <b>(This could take 10 minutes or more before it shows "done")</b>
 </pre>
+-->
 
 Setup is complete! Move on to [Running Jupyter Lab](#running-jupyter-lab).
 
@@ -283,7 +295,12 @@ jupyter lab
 
 This will spawn a jupyter server instance and attempt to open your web browser. If it does not do so automatically, it will print a URL that you can copy and paste into your browser manually.
 
-*Note:* The above screenshot shows some warning and error messages. Although they look scary, they don't affect the use of Jupyter Lab (although on my laptop it does not automatically open the browser window). To open the notebook, I only need to visited the highlighted link. 
+If your browser fails to connect to the URL, try this command instead:
+```
+jupyter lab --no-browser
+```
+
+*Note:* The above screenshot shows some warning and error messages. Although they appear to be concerning, they don't affect the use of Jupyter Lab. To open the notebook, I only need to visited the highlighted link. 
 
 Over time, you will become attuned to which warning/error messages are important and which ones are irrelevant. It is one of the most important, yet unspoken-of skills on your journey to becoming a programmer.
 
