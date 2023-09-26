@@ -6,7 +6,7 @@ permalink: /
 
 # CHE155: Scientific Programming for Chemistry
 
-## Fall 2022
+## Fall 2023
 
 - Instructor: [Lee-Ping Wang](mailto:leeping@ucdavis.edu)
 - Class Info: MWF 3:10-4:00 PM, Giedt 1006
