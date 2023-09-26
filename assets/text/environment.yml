@@ -3,6 +3,7 @@ channels:
     - psi4
     - rdkit
     - conda-forge
+    - conda-forge/label/libint_dev
     - defaults
 dependencies:
     - python=3.9
@@ -43,6 +44,7 @@ dependencies:
 # Pandas 2.1.1 requires tables >= 3.7 and numexpr >= 2.8.
 # Jax requires cudatoolkit-dev in week 10. (Removed because I don't teach it.. and the pkg. seems too large)
 # Added TensorFlow.
+# Added conda-forge/label/libint_dev because MacOS needs it to install psi4>=1.7 (it tries to install 1.8).
 # 
 # Notes added 2022-09-17:
 # Installing all packages in one go, without specifying psi4 version, could cause psi4 1.4 or 1.5 to be installed.
