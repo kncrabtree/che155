@@ -183,8 +183,15 @@ When asked if you want to activate the conda environment, say yes.
 **Step 3:** Close and reopen the terminal program. You should now see `(base)` in your prompt indicating you are in the base environment.
 
 **Step 4:** Download the environment file with the command
+
+*For MacOS*:
 ```
 curl -O https://leeping.github.io/che155/assets/text/environment.yml
+```
+
+*For Linux or WSL*:
+```
+wget https://leeping.github.io/che155/assets/text/environment.yml
 ```
 
 **Step 5:** Create the conda environment
