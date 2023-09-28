@@ -7,7 +7,7 @@ channels:
     - defaults
 dependencies:
     - python=3.9
-    - psi4>=1.7
+    - psi4>=1.6
     - psi4-rt
     - rdkit
     - numpy>=1.22.3,<1.23.0

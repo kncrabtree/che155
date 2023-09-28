@@ -12,7 +12,7 @@ You may already have Python on your computer, which may be part of an existing A
 To make this process go smoothly, it is *highly* recommended that you start from a completely new installation by following the instructions below. 
 Your instructor has already spent many hours on getting these instructions to work without errors on multiple platforms, so (hopefully) it will work on your machine without any issues.
 
-Before starting installation, you need to have about 10 GB of disk space to download and extract all the packages.  Make sure your computer is plugged into power and you have a decently fast Internet connection.
+Before starting installation, you need to have about 20 GB of disk space to download and extract all the packages.  Make sure your computer is plugged into power and you have a decently fast Internet connection.
 
 <!-- For convenience, these are included in an [environment file]( {{site.baseurl}}/assets/text/environment.yml) that is compatible with the `conda` package manager. 
 
@@ -183,8 +183,15 @@ When asked if you want to activate the conda environment, say yes.
 **Step 3:** Close and reopen the terminal program. You should now see `(base)` in your prompt indicating you are in the base environment.
 
 **Step 4:** Download the environment file with the command
+
+*For MacOS*:
 ```
 curl -O https://leeping.github.io/che155/assets/text/environment.yml
+```
+
+*For Linux or WSL*:
+```
+wget https://leeping.github.io/che155/assets/text/environment.yml
 ```
 
 **Step 5:** Create the conda environment
