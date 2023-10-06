@@ -12,7 +12,7 @@ permalink: /
 - Class Info: MWF 3:10-4:00 PM, Giedt 1006
 - Office Hours: W 4:10-5:00 PM, Chemistry 190B
 - TA: [Heejune Park](mailto:heepark@ucdavis.edu)
-- TA Office Hours: TBA
+- TA Office Hours: M 1:00-2:00 PM, Chemistry 190C
 - [CHE 155 Github Repository](https://github.com/leeping/che155)
 
 ## Course Overview and Objectives
