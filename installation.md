@@ -171,7 +171,7 @@ curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
-*Note for Apple M1/M2 Mac users:* You shouldn't download the Apple M1 installer because not all of the packages are available for that architecture.  Instead, you should run your Terminal in "Rosetta" mode which allows running programs built for Intel CPUs.  Do this by right-clicking the Terminal program, choosing "Get Info" and check the "Open in Rosetta" box.
+*Note for Apple M1/M2 Mac users:* You shouldn't download the Apple M1 installer because not all of the packages are available for that architecture.  Instead, you should run your Terminal in "Rosetta" mode which allows running programs built for Intel CPUs.  Do this by going to your Applications -> Utilities folder, right-clicking the Terminal program, choosing "Get Info" and check the "Open in Rosetta" box.
 
 *Note for existing Anaconda/Miniconda installations:* It is recommended that you carry out a brand-new Miniconda installation and remove any existing installation before proceeding, because that reduces the chance of `conda` getting stuck in solving the environment.  You can remove an existing Miniconda installation by trashing the install folder (the default location is `~/miniconda3` or `~/anaconda3`).  If you still want to use an existing miniconda installation, skip to step 4. 
 
@@ -205,9 +205,13 @@ First update the Conda base executable:
 conda update -n base conda
 ```
 
-Next, install the libmamba solver and activate it:
+Next, install the libmamba solver:
 ```
 conda install -n base conda-libmamba-solver
+```
+
+Then activate the solver:
+```
 conda config --set solver libmamba
 ```
 
