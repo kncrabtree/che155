@@ -1,0 +1,2 @@
+hydrogen-orbitals-1-v1.ipynb contains plots of real and imaginary part; removing because of insufficient time.
+hydrogen-orbitals-2-v1.ipynb contains a class for plotting orbitals that is hard to explain.  The updated version contains an easier-to-explain version of spherical coordinates conversion to Cartesian.
