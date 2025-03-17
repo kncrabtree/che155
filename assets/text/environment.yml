@@ -1,34 +1,58 @@
 name: che155
 channels:
-    - conda-forge
     - psi4
     - rdkit
+    - conda-forge
+    - conda-forge/label/libint_dev
     - defaults
 dependencies:
-    - numpy>=1.19
-    - scipy>=1.6
-    - python=3.7    
+    - python=3.9
+    - psi4>=1.6
+    - psi4-rt
+    - rdkit
+    - numpy>=1.22.3,<1.23.0
+    - scipy>=1.7
     - matplotlib
-    - jupyterlab=2
+    - jupyterlab
     - ipyparallel
     - ipympl
     - ipywidgets
     - plotly
-    - pandas>=1.2
-    - pingouin>=0.3.10
     - tabulate
-    - scikit-image
-    - psi4
-    - psi4-rt
-    - openmm
-    - rdkit
-    - openbabel
-    - mdtraj
-    - geometric
     - networkx
+    - scikit-image
+    - pandas>=1.2
+    - pingouin>=0.5
+    - pydantic=1
+    - openmm
+    - openbabel
+    - geometric
+    - mdtraj
     - nglview
-    - nodejs
-    - pip
-    - pip:
-      - tables==3.6.1
-    
+    - pytables
+    - pytorch
+    - jax
+    - pytables>=3.7
+    - numexpr>=2.8
+    - tensorflow
+
+# Notes added 2023-09-25:
+# With the current loadout, installing scipy >= 1.8 causes conda to hang.
+# Psi4 1.8 requires a version of libint that cannot be found, so we're using 1.7.
+# Cannot install qcelemental=0.26, which is the first version that does not break when using Pydantic 2.
+# Therefore we force Pydantic version to 1.
+# Pandas 2.1.1 requires tables >= 3.7 and numexpr >= 2.8.
+# Jax requires cudatoolkit-dev in week 10. (Removed because I don't teach it.. and the pkg. seems too large)
+# Added TensorFlow.
+# Added conda-forge/label/libint_dev because MacOS needs it to install psi4>=1.7 (it tries to install 1.8).
+# 
+# Notes added 2022-09-17:
+# Installing all packages in one go, without specifying psi4 version, could cause psi4 1.4 or 1.5 to be installed.
+# They may cause undefined symbol or segfaults at the import/run stage, so installing those versions is unacceptable.
+# (2023-09-25: This isn't a problem anymore)
+# Freeing the Python version number will cause 3.10 to be installed which will lead to conflicts on Mac when installing the second batch.
+# Installing psi4 will sometimes cause a very old version of numpy to be installed. Version pinning ensures it is not too old.
+# scipy 1.7.3 will complain if numpy is newer than 1.22.
+# pingouin older than 0.5 will have a different API that breaks scipy calling ttest notebook in week 2.
+# ipywidgets < 8 is added because nglview will throw AttributeError: 'super' object has no attribute '_ipython_display_' otherwise.
+# (2023-09-25: This isn't a problem anymore)

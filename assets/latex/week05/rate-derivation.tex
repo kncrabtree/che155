@@ -1,0 +1,196 @@
+\documentclass[10pt]{article}
+\usepackage{fullpage,textcomp,fancyhdr,booktabs,titlesec,color,graphicx,amsmath,amssymb,cancel,array,wrapfig,chemfig,tikz}
+\usepackage[colorlinks=true,citecolor=black,linkcolor=black,urlcolor=blue]{hyperref}
+\usepackage[pointlessenum]{paralist}
+\usepackage[version=4]{mhchem}
+
+\renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+
+\usetikzlibrary{arrows.meta,calc}
+\newlength{\mylinewidth}
+\setlength{\mylinewidth}{1.6pt}
+\tikzset{
+    ultra thin/.style= {line width=0.25\mylinewidth},
+    very thin/.style=  {line width=0.5\mylinewidth},
+    thin/.style=       {line width=\mylinewidth},
+    semithick/.style=  {line width=1.5\mylinewidth},
+    thick/.style=      {line width=2\mylinewidth},
+    very thick/.style= {line width=3\mylinewidth},
+    ultra thick/.style={line width=4\mylinewidth},
+    every picture/.style={thin},
+    >=stealth
+}
+
+\titleformat{\section}{\normalfont\sc\large}{\hspace{1em}\thesection}{0.25em}{\textbardbl\hspace{0.25em}}
+\titleformat{\subsection}{\normalfont\sc}{\hspace{1.5em}\thesubsection}{0.25em}{\textbar\hspace{0.25em}}
+\renewcommand{\labelitemi}{\textopenbullet}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\setlength{\headheight}{12.0pt}
+\setlength{\headsep}{12.0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+
+\lhead{CHE 155}
+\chead{\ce{H3+} Deuteration Derivation}
+\rhead{2022S}
+\lfoot{leeping@ucdavis.edu}
+\cfoot{}
+\rfoot{\thepage}
+
+\begin{document}
+
+\section*{Overview}
+
+In Hugo et al.\ 2009, the deuteration of \ce{H3} was investigated in an ion trap at 13.5 K.
+The key reactions and their rates are:
+\begin{eqnarray}
+ \ce{H3+ + HD -> H2D+ + H2} && \text{Rate} = k_1^{(2)}[\ce{HD}][\ce{H3+}] \\
+ \ce{H2D+ + HD -> D2H+ + H2} && \text{Rate} = k_2^{(2)}[\ce{HD}][\ce{H2D+}] \\
+ \ce{D2H+ + HD -> D3+ + H2} && \text{Rate} = k_3^{(2)}[\ce{HD}][\ce{D2H+}]
+\end{eqnarray}
+In these equations, brackets indicate the number density (cm$^{-3}$), and the $k_n^{(2)}$ refer to second-order rate coefficients in units of cm$^{3}$ s$^{-1}$ so that the rate has units of cm$^{-3}$ s$^{-1}$.
+At the low temperature, the reverse reactions are negligible.
+Furthermore, under the experimental conditions, HD is present in excess, and it is reasonable to treat [HD] as constant.
+Under these pseudo-first-order conditions, we can redefine the rate coefficients
+\begin{equation}
+ k_n \equiv k_n^{(2)}[\ce{HD}]
+\end{equation}
+
+Using the rates above, we obtain a set of coupled differential equations describing the time evolution of the number densities.
+\begin{eqnarray}
+ \frac{\d{[\ce{H3+}]}}{\d{t}} & = & -k_1[\ce{H3+}] \label{h3_d} \\
+ \frac{\d{[\ce{H2D+}]}}{\d{t}} & = & k_1[\ce{H3+}] - k_2[\ce{H2D+}] \label{h2d_d}\\
+ \frac{\d{[\ce{D2H+}]}}{\d{t}} & = & k_2[\ce{H2D+}] - k_3[\ce{D2H+}] \label{d2h_d}\\
+ \frac{\d{[\ce{D3+}]}}{\d{t}} & = & k_3[\ce{D2H+}] \label{d3_d}
+\end{eqnarray}
+
+\section*{Solving for [\ce{H3+}]}
+
+Solving for $[\ce{H3+}](t)$ involved simply a normal first-order integrated rate equation.
+Rearranging Equation \eqref{h3_d}:
+\begin{eqnarray}
+ \frac{\d{[\ce{H3+}]}}{[\ce{H3+}]} & = & -k_1\,\d{t} \nonumber \\
+ \ln [\ce{H3+}](t) & = & -k_1 t + C \nonumber \\
+ {[\ce{H3+}](t)} & = & Ae^{-k_1 t}
+\end{eqnarray}
+At $t=0$, $[\ce{H3+}] = [\ce{H3+}]_0$, so
+\begin{equation}
+ \boxed{{[\ce{H3+}](t)} = [\ce{H3+}]_0e^{-k_1 t} \label{h3_i}}
+\end{equation}
+
+
+\section*{Solving for [\ce{H2D+}]}
+
+To solve for the time evolution of [\ce{H2D+}], we substitute the result of Equation \eqref{h3_i} into Equation \eqref{h2d_d} and rearrange:
+\begin{equation}
+ \frac{\d{[\ce{H2D+}]}}{\d{t}} + k_2[\ce{H2D+}] = k_1[\ce{H3+}]_0 e^{-k_1 t} \label{h2d_1}
+\end{equation}
+
+To make progress, we introduce a new variable $\mu$:
+\begin{equation}
+ \mu \equiv e^{k_2 t},\quad \frac{\d{\mu}}{\d{t}} = k_2e^{k_2 t}
+\end{equation}
+
+Now we multiply both sides of Equation \eqref{h2d_1} by $\mu$ to get
+\begin{equation}
+ \mu\frac{\d{[\ce{H2D+}]}}{\d{t}} + [\ce{H2D+}]\frac{\d{\mu}}{\d{t}} = k_1[\ce{H3+}]_0 e^{-(k_1-k_2)t} \label{h2d_2}
+\end{equation}
+
+From the definition of the product rule for derivatives:
+\begin{equation}
+ \frac{\d{}}{\d{t}}\left(\mu[\ce{H2D+}]\right) = \mu\frac{\d{[\ce{H2D+}]}}{\d{t}} + [\ce{H2D+}]\frac{\d{\mu}}{\d{t}}
+\end{equation}
+
+Substitute into Equation~\eqref{h2d_2} and integrate:
+\begin{eqnarray}
+ \int \frac{\d{}}{\d{t}}\left(\mu[\ce{H2D+}]\right)\,\d{t} & = & \int k_1[\ce{H3+}]_0 e^{-(k_1-k_2)t}\,\d{t} \nonumber \\
+ \mu[\ce{H2D+}](t) & = & \frac{k_1[\ce{H3+}]_0}{k_2 - k_1}e^{-(k_1-k_2)t} + C \nonumber \\
+ {[\ce{H2D+}](t)} & = & \frac{k_1[\ce{H3+}]_0}{k_2 - k_1}e^{-k_1 t} + Ce^{-k_2 t}
+\end{eqnarray}
+
+To evaluate $C$, we use the boundary condition that at $t=0$, $[\ce{H2D+}] = 0$, and therefore
+\begin{equation}
+ 0 = \frac{k_1[\ce{H3+}]_0}{k_2 - k_1} + C, \quad C = -\frac{k_1[\ce{H3+}]_0}{k_2 - k_1}
+\end{equation}
+
+Substituting, we obtain the integrated rate equation for $[\ce{H2D+}](t)$:
+\begin{equation}
+ \boxed{[\ce{H2D+}](t) = \frac{k_1[\ce{H3+}]_0}{k_2 - k_1}\left(e^{-k_1 t} - e^{-k_2 t}\right) \label{h2d_i}}
+\end{equation}
+
+However, note that if $k_1 = k_2 \equiv k$, the denominator goes to 0.
+Looking back, Equation \eqref{h2d_2} becomes instead
+\begin{equation}
+\mu\frac{\d{[\ce{H2D+}]}}{\d{t}} + [\ce{H2D+}]\frac{\d{\mu}}{\d{t}} = k[\ce{H3+}]_0
+\end{equation}
+
+Then
+\begin{eqnarray}
+ \int \frac{\d{}}{\d{t}}\left(\mu[\ce{H2D+}]\right)\,\d{t} & = & \int k[\ce{H3+}]_0 \,\d{t} \nonumber \\
+ \mu[\ce{H2D+}](t) & = &k[\ce{H3+}]_0 kt + C \nonumber \\
+ {[\ce{H2D+}](t)} & = & [\ce{H3+}]_0 kte^{-k t} + Ce^{-kt}
+\end{eqnarray}
+
+Again, at $t=0$, $[\ce{H2D+}] = 0$, so $C=0$.
+The final result is therefore
+\begin{equation}
+ \boxed{[\ce{H2D+}](t) = [\ce{H3+}]_0 kte^{-k t},\quad (k = k_1 = k_2)}
+\end{equation}
+
+\section*{Solving for [\ce{D2H+}]}
+
+The procedure is essentially the same as for [\ce{H2D+}].
+First, substitute Equation~\eqref{h2d_i} into Equation~\eqref{d2h_d} and rearrange:
+\begin{equation}
+ \frac{\d{[\ce{D2H+}]}}{\d{t}} + k_3[\ce{D2H+}] = \frac{k_1k_2[\ce{H3+}]_0}{k_2 - k_1}\left(e^{-k_1 t} - e^{-k_2 t}\right) \label{d2h_1}
+\end{equation}
+
+As before, we introduce the variable $\mu$ and its derivative:
+\begin{equation}
+ \mu \equiv e^{k_3 t},\quad \frac{\d{\mu}}{\d{t}} = k_3e^{k_3 t}
+\end{equation}
+
+Multiplying both sides of Equation~\eqref{d2h_1} by $\mu$, we obtain (just like before):
+\begin{eqnarray}
+ \mu\frac{\d{[\ce{D2H+}]}}{\d{t}} + [\ce{D2H+}]\frac{\d{\mu}}{\d{t}} & = & \frac{k_1k_2[\ce{H3+}]_0}{k_2 - k_1}\left(e^{-(k_1-k_3) t} - e^{-(k_2-k_3) t}\right) \nonumber \\
+ \int \frac{\d{}}{\d{t}}\left(\mu[\ce{D2H+}]\right) & = & \int \frac{k_1k_2[\ce{H3+}]_0}{k_2 - k_1}\left(e^{-(k_1-k_3) t} - e^{-(k_2-k_3) t}\right) \nonumber \\
+ \mu[\ce{D2H+}](t) & = & \frac{k_1k_2[\ce{H3+}]_0}{k_2 - k_1}\left(\frac{e^{-(k_1-k_3) t}}{k_3 - k_1} - \frac{e^{-(k_2-k_3) t}}{k_3 - k_2}\right) + C \nonumber \\
+ {[\ce{D2H+}](t)} & = & \frac{k_1k_2[\ce{H3+}]_0}{k_2 - k_1}\left(\frac{e^{-k_1 t}}{k_3 - k_1} - \frac{e^{-k_2 t}}{k_3 - k_2}\right) + Ce^{-k_2 t}
+\end{eqnarray}
+
+The boundary condition is at $t=0$, $[\ce{D2H+}]=0$, so
+\begin{equation}
+ C = -\frac{k_1k_2[\ce{H3+}]_0}{k_2 - k_1}\left(\frac{1}{k_3-k_1} - \frac{1}{k_3-k_2}\right)
+\end{equation}
+
+So the final result is
+\begin{equation}
+ \boxed{[\ce{D2H+}](t) = \frac{k_1k_2[\ce{H3+}]_0}{k_2 - k_1}\left(\frac{e^{-k_1 t} - e^{-k_3 t}}{k_3 - k_1} - \frac{e^{-k_2 t} - e^{-k_3 t}}{k_3 - k_2}\right) \label{d2h_i}}
+\end{equation}
+
+Note that if $k_1 = k_2$ or $k_1 = k_3$ or $k_2 = k_3$, we would have to rederive an alternative form of this equation like we did for [\ce{H2D+}].
+We will not do that here.
+
+\section*{Solving for [\ce{D3+}]}
+
+This one is very easy.
+Using conservation of mass, we know that
+\begin{equation}
+ [\ce{H3+}](t) + [\ce{H2D+}](t) + [\ce{D2H+}](t) + [\ce{D3+}](t) = [\ce{H3+}]_0
+\end{equation}
+
+Therefore
+\begin{equation}
+ \boxed{[\ce{D3+}](t) = [\ce{H3+}]_0 - [\ce{H3+}](t) - [\ce{H2D+}](t) - [\ce{D2H+}](t)}
+\end{equation}
+where we can insert Equations~\eqref{h3_i}, \eqref{h2d_i}, and \eqref{d2h_i}.
+
+
+
+
+
+
+
+ 
+\end{document}
