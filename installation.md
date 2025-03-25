@@ -196,30 +196,9 @@ wget https://leeping.github.io/che155/assets/text/environment.yml
 
 **Step 5:** Create the conda environment
 
-*Note:* For several years, the algorithm that Conda uses to solve package dependencies has had a serious problem that it would take extremely long times, making it difficult to use.
-A new algorithm called "mamba" was recently introduced that is significantly faster, but the newest Miniconda release has not changed the default algorithm yet.
-Therefore, the algorithm needs to be changed manually.
-
-First update the Conda base executable:
+First, download the [che155.yml](/assets/text/che155.yml) file. This contains a list of the required packages and repositories, telling `conda` what it needs to download. To create the environment, run the command below. The command assumes that you have navigated to the directory where the `che155.yml` file is located; otherwise, simply specify the path to the file. This is the longest step as it will download and install all of the third-party packages that we will be using in this course.
 ```
-conda update -n base conda
-```
-
-Next, install the libmamba solver:
-```
-conda install -n base conda-libmamba-solver
-```
-
-Then activate the solver:
-```
-conda config --set solver libmamba
-```
-
-The above steps should be relatively fast.
-
-Now create the environment; this is the longest step as it will download and install all of the third-party packages that we will be using in this course.
-```
-conda env create -f environment.yml
+conda env create -f che155.yml
 ```
 
 The output should look something like this:

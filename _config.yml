@@ -14,13 +14,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: CHE155
-email: leeping@ucdavis.edu
+email: kncrabtree@ucdavis.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Scientific Programming for Chemistry
 baseurl: "/che155" # the subpath of your site, e.g. /blog
 url: "https://leeping.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: leeping
-github_username:  leeping
+github_username:  kncrabtree
+github_url: "https://github.com/kncrabtree/che155"
+instructor: "Kyle Crabtree"
+canvasid: 995775
 
 # Build settings
 markdown: kramdown
