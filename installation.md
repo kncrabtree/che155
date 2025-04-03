@@ -186,12 +186,12 @@ When asked if you want to activate the conda environment, say yes.
 
 *For MacOS*:
 ```
-curl -O https://kncrabtree.github.io/che155/assets/text/che155.yml
+curl -O {{ site.url }}/che155/assets/text/che155.yml
 ```
 
 *For Linux or WSL*:
 ```
-wget https://kncrabtree.github.io/che155/assets/text/che155.yml
+wget {{ site.url }}/che155/assets/text/che155.yml
 ```
 
 **Step 5:** Create the conda environment
