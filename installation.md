@@ -161,7 +161,7 @@ As with Windows, keeping your files in one place reduces the potential confusion
 
 You may download from the [Miniconda webpage](https://docs.conda.io/en/latest/miniconda.html) and download the installer under "Latest Miniconda Installer Links", or follow the command line instructions below.  
 
-*For Mac*: Download the 64-bit installer for Intel CPUs using the following command:
+*For Mac*: 
 ```
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
 ```
@@ -186,17 +186,17 @@ When asked if you want to activate the conda environment, say yes.
 
 *For MacOS*:
 ```
-curl -O https://leeping.github.io/che155/assets/text/environment.yml
+curl -O https://kncrabtree.github.io/che155/assets/text/che155.yml
 ```
 
 *For Linux or WSL*:
 ```
-wget https://leeping.github.io/che155/assets/text/environment.yml
+wget https://kncrabtree.github.io/che155/assets/text/che155.yml
 ```
 
 **Step 5:** Create the conda environment
 
-First, download the [che155.yml](/assets/text/che155.yml) file. This contains a list of the required packages and repositories, telling `conda` what it needs to download. To create the environment, run the command below. The command assumes that you have navigated to the directory where the `che155.yml` file is located; otherwise, simply specify the path to the file. This is the longest step as it will download and install all of the third-party packages that we will be using in this course.
+To create the `che155` conda environment, run the command below. The command assumes that your working directory is where the `che155.yml` file is located (which will be the case if you used the commands above to download the file); otherwise, simply specify the path to the file. This is the longest step as it will download and install all of the third-party packages that we will be using in this course.
 ```
 conda env create -f che155.yml
 ```
