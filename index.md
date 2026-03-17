@@ -6,11 +6,11 @@ permalink: /
 
 # CHE155: Scientific Programming for Chemistry
 
-## Spring 2025
+## Spring 2026
 
 - Instructor: [{{ site.instructor }}](mailto:{{ site.email }})
-- Class Info: MWF 10:00-10:50 AM, Wellman 203
-- Office Hours: T 12:00-1:00 PM, F 4:00-5:00 PM, Chemistry 2206
+- Class Info: MWF 10:00-10:50 AM, Social Science & Humanities 00080
+- Office Hours: TBD
 - [CHE 155 Github Repository]({{ site.github_url }})
 
 ## Course Overview and Objectives
@@ -40,7 +40,7 @@ Please see the [Installation]({{ "installation" | relative_url }}) page for inst
 {% endfor %}
 
 ## Course Organization
-![organization]({{ site.baseurl }}/assets/images/organization-{{ site.github_username }}.png){: width="450"}
+![Diagram showing four course resource categories: Canvas Page, Course Website, In-person, and GitHub Repository, each listing their respective contents.]({{ site.baseurl }}/assets/images/organization-{{ site.github_username }}.png){: width="450"}
 
 The course resources are organized roughly according to this graphic. 
 This course has a [Canvas page](https://canvas.ucdavis.edu/courses/{{ site.canvasid }}) that you need your UC Davis login to access.

@@ -52,7 +52,7 @@ In the future you can open the Ubuntu command line by running Ubuntu from the St
 
 At this point it's best to restart your computer.
 
-![ubuntu_install]({{ site.baseurl }}/assets/images/installation/windows-install-wsl.png){: width="350"}
+![Screenshot of Windows PowerShell running the WSL install command in the background, with the Ubuntu terminal open in the foreground showing the initial login prompt.]({{ site.baseurl }}/assets/images/installation/windows-install-wsl.png){: width="350"}
 
 Above: Windows PowerShell (top) and Ubuntu terminal (bottom)
 
@@ -62,7 +62,7 @@ This error has been observed several times over past years on students' computer
 In the menu that appears, find the Virtualization menu item and enable the virtualization options for your CPU (probably Intel or AMD).
 Then save the settings and exit, and your computer will be rebooted once more. You should no longer see the error when attempting to install WSL.
 
-![bios]({{ site.baseurl }}/assets/images/installation/bios.jpg){: width="550"}
+![Two screenshots of the ThinkPad BIOS Setup Security menu, showing the Virtualization submenu with Intel Virtualization Technology and Intel VT-d Feature enabled.]({{ site.baseurl }}/assets/images/installation/bios.jpg){: width="550"}
 
 Above: Turning on virtualization on your instructor's laptop
 
@@ -84,7 +84,7 @@ You can also use another Linux distribution if you're feeling adventurous. They 
 You can get the Windows terminal from the Microsoft store.
 The Windows terminal allows you to open different command lines (such as Windows Powershell and Ubuntu), but it comes with convenient features such as tabs, a longer scrollback history, cut/paste, customizable colors, etc. 
 
-![ubuntu_install]({{ site.baseurl }}/assets/images/installation/windows-terminal.png){: width="350"}
+![Screenshot of Windows Terminal showing a PowerShell tab with the new-tab dropdown menu open, with Ubuntu-20.04 highlighted as an option, and an Ubuntu terminal tab open below.]({{ site.baseurl }}/assets/images/installation/windows-terminal.png){: width="350"}
 
 When you open Windows Terminal for the first time, it will give you a Windows Powershell by default (above image).
 You can open a Ubuntu terminal by clicking the small "⌄" icon in the menu bar.
@@ -281,7 +281,7 @@ Jupyter Lab is a Python notebook environment that runs in your web browser. The 
 jupyter lab
 ```
 
-![jupyter_lab]({{ site.baseurl }}/assets/images/installation/jupyter-lab.png){: width="650"}
+![Terminal output from running the 'jupyter lab' command, showing extensions loading successfully and the local URLs to open JupyterLab in a browser.]({{ site.baseurl }}/assets/images/installation/jupyter-lab.png){: width="650"}
 
 This will spawn a jupyter server instance and attempt to open your web browser. If it does not do so automatically, it will print a URL that you can copy and paste into your browser manually.
 

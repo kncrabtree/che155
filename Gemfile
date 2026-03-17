@@ -25,6 +25,8 @@ gem "csv", "~>3.0"
 
 gem "bigdecimal"
 
+gem "faraday-retry"
+
 # If you have any plugins, put them here!
 # group :jekyll_plugins do
 #  gem "jekyll-feed", "~> 0.6"
