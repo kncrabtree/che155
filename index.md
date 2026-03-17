@@ -6,11 +6,11 @@ permalink: /
 
 # CHE155: Scientific Programming for Chemistry
 
-## Spring 2025
+## Spring 2026
 
 - Instructor: [{{ site.instructor }}](mailto:{{ site.email }})
-- Class Info: MWF 10:00-10:50 AM, Wellman 203
-- Office Hours: T 12:00-1:00 PM, F 4:00-5:00 PM, Chemistry 2206
+- Class Info: MWF 10:00-10:50 AM, Social Science & Humanities 00080
+- Office Hours: TBD
 - [CHE 155 Github Repository]({{ site.github_url }})
 
 ## Course Overview and Objectives
