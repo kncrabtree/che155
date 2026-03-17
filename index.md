@@ -40,7 +40,7 @@ Please see the [Installation]({{ "installation" | relative_url }}) page for inst
 {% endfor %}
 
 ## Course Organization
-![organization]({{ site.baseurl }}/assets/images/organization-{{ site.github_username }}.png){: width="450"}
+![Diagram showing four course resource categories: Canvas Page, Course Website, In-person, and GitHub Repository, each listing their respective contents.]({{ site.baseurl }}/assets/images/organization-{{ site.github_username }}.png){: width="450"}
 
 The course resources are organized roughly according to this graphic. 
 This course has a [Canvas page](https://canvas.ucdavis.edu/courses/{{ site.canvasid }}) that you need your UC Davis login to access.
