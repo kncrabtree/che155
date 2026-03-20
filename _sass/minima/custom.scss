@@ -1,3 +1,47 @@
+// Course organization diagram
+.org-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  margin: 1.5em 0;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.org-card {
+  border-radius: 10px;
+  border-left: 6px solid transparent;
+  padding: 16px 20px;
+
+  h3 {
+    margin: 0 0 4px;
+    font-size: 1.05em;
+  }
+
+  .org-url {
+    font-family: monospace;
+    font-size: 0.82em;
+    margin: 0 0 10px;
+    color: #333;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.92em;
+  }
+
+  li { margin-bottom: 2px; }
+
+  &.org-canvas   { background: #f5f5b8; border-left-color: #a09800; }
+  &.org-website  { background: #e4f7de; border-left-color: #3a8030; }
+  &.org-inperson { background: #fdeef0; border-left-color: #b83858; }
+  &.org-github   { background: #e8f2fc; border-left-color: #2e60a8; }
+}
+
 // Skip to main content link (WCAG 2.4.1)
 .skip-link {
   position: absolute;
