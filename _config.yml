@@ -32,6 +32,10 @@ kramdown:
   
 theme: minima
 
+header_pages:
+  - index.md
+  - installation.md
+
 collections:
     weeks:
         output: true
