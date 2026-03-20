@@ -1,0 +1,43 @@
+<div class="org-grid">
+
+  <div class="org-card org-canvas">
+    <h3><a href="https://canvas.ucdavis.edu/courses/{{ site.canvasid }}">Canvas Page</a></h3>
+    <p class="org-url">canvas.ucdavis.edu</p>
+    <ul>
+      <li>Course announcements</li>
+      <li>Exercises &amp; Projects</li>
+      <li>Lecture Recordings</li>
+      <li>Link to Discord server</li>
+    </ul>
+  </div>
+
+  <div class="org-card org-website">
+    <h3><a href="{{ "/" | relative_url }}">Course Website</a></h3>
+    <p class="org-url">{{ site.github_username }}.github.io/che155</p>
+    <ul>
+      <li>Syllabus</li>
+      <li>Installation instructions</li>
+      <li>Weekly readings</li>
+      <li>Links to notebook files</li>
+    </ul>
+  </div>
+
+  <div class="org-card org-inperson">
+    <h3>In-person</h3>
+    <ul>
+      <li>Lectures</li>
+      <li>Office Hours</li>
+    </ul>
+  </div>
+
+  <div class="org-card org-github">
+    <h3><a href="{{ site.github_url }}">GitHub Repository</a></h3>
+    <p class="org-url">github.com/{{ site.github_username }}/che155</p>
+    <ul>
+      <li>Website source files</li>
+      <li>Notebook files</li>
+      <li>Other resources</li>
+    </ul>
+  </div>
+
+</div>
