@@ -23,7 +23,7 @@ url: "https://kncrabtree.github.io" # the base hostname & protocol for your site
 github_username:  kncrabtree
 github_url: "https://github.com/kncrabtree/che155"
 instructor: "Kyle Crabtree"
-canvasid: 995775
+canvasid: 1079850
 
 # Build settings
 markdown: kramdown
