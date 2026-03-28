@@ -1,0 +1,14 @@
+name: che155-dynamics
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - jupyterlab
+  - ipykernel
+  - ipywidgets<8    # Version 7 is often more stable for NGLview
+  - openmm
+  - mdtraj
+  - nglview
+  - pytables
+  - numpy>=1.24

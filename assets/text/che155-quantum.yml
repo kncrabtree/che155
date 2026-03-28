@@ -1,0 +1,15 @@
+name: che155-quantum
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - jupyterlab 
+  - ipykernel  
+  - ipywidgets
+  - psi4
+  - geometric
+  - qcelemental
+  - basis_set_exchange
+  - numpy
+  - rdkit
