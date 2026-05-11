@@ -3,13 +3,15 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python
-  - jupyterlab 
-  - ipykernel  
+  - python=3.10
+  - jupyterlab
+  - ipykernel
   - ipywidgets
   - psi4
   - geometric
   - qcelemental
   - basis_set_exchange
   - numpy
+  - matplotlib
   - rdkit
+  - py3Dmol

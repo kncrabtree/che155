@@ -46,9 +46,9 @@ conda config --set solver libmamba
 **Step 3:** Download the environment files. In your Anaconda Prompt, run:
 
 ```
-curl -O {{ site.url }}/che155/assets/text/che155-core.yml
-curl -O {{ site.url }}/che155/assets/text/che155-dynamics.yml
-curl -O {{ site.url }}/che155/assets/text/che155-ml.yml
+curl -O {{ site.url }}{{ site.baseurl }}/assets/text/che155-core.yml
+curl -O {{ site.url }}{{ site.baseurl }}/assets/text/che155-dynamics.yml
+curl -O {{ site.url }}{{ site.baseurl }}/assets/text/che155-ml.yml
 ```
 
 **Step 4:** Create the environments. This is the longest step; each environment downloads and installs many packages. Allow 10–20 minutes per environment.
@@ -59,9 +59,12 @@ conda env create -f che155-dynamics.yml
 conda env create -f che155-ml.yml
 ```
 
-**Step 5:** Register the non-core environments as Jupyter kernels so you can switch between them within a single JupyterLab session:
+**Step 5:** Register the environments as Jupyter kernels so you can switch between them within a single JupyterLab session:
 
 ```
+conda activate che155-core
+python -m ipykernel install --user --name che155-core --display-name "Python (CHE 155 Core)"
+
 conda activate che155-dynamics
 python -m ipykernel install --user --name che155-dynamics --display-name "Python (CHE 155 Dynamics)"
 
@@ -117,21 +120,25 @@ conda config --set solver libmamba
 
 *For macOS*:
 ```
-curl -O {{ site.url }}/che155/assets/text/che155-core.yml
-curl -O {{ site.url }}/che155/assets/text/che155-quantum.yml
-curl -O {{ site.url }}/che155/assets/text/che155-dynamics.yml
-curl -O {{ site.url }}/che155/assets/text/che155-ml.yml
+curl -O {{ site.url }}{{ site.baseurl }}/assets/text/che155-core.yml
+curl -O {{ site.url }}{{ site.baseurl }}/assets/text/che155-quantum.yml
+curl -O {{ site.url }}{{ site.baseurl }}/assets/text/che155-dynamics.yml
+curl -O {{ site.url }}{{ site.baseurl }}/assets/text/che155-ml.yml
 ```
 
 *For Linux or WSL*:
 ```
-wget {{ site.url }}/che155/assets/text/che155-core.yml
-wget {{ site.url }}/che155/assets/text/che155-quantum.yml
-wget {{ site.url }}/che155/assets/text/che155-dynamics.yml
-wget {{ site.url }}/che155/assets/text/che155-ml.yml
+curl -O {{ site.url }}{{ site.baseurl }}/assets/text/che155-core.yml
+curl -O {{ site.url }}{{ site.baseurl }}/assets/text/che155-quantum.yml
+curl -O {{ site.url }}{{ site.baseurl }}/assets/text/che155-dynamics.yml
+curl -O {{ site.url }}{{ site.baseurl }}/assets/text/che155-ml.yml
 ```
 
+(If `curl` is not installed on a minimal Linux image, install it with `sudo apt install curl`, or substitute `wget` for `curl -O`.)
+
 **Step 6:** Create the conda environments. This is the longest step; each environment downloads and installs many packages. Allow 10–20 minutes per environment.
+
+*Note for Apple Silicon Mac users:* The `che155-quantum` environment depends on `psi4`, which is built primarily for Intel (`osx-64`) on conda-forge. If you followed the Rosetta guidance in Step 1 (running Terminal under Rosetta), the install will proceed using the `osx-64` builds. If `conda env create -f che155-quantum.yml` still fails on Apple Silicon, the recommended fallback is to install this one environment inside WSL-style x86_64 emulation — or, in practice, ask the instructor for help; we can usually walk through it interactively in office hours.
 
 ```
 conda env create -f che155-core.yml
@@ -171,9 +178,12 @@ Executing transaction: done
 
 It is recommended to leave this running in the background; make sure your laptop is plugged in so the battery won't run out.
 
-**Step 7:** Register the non-core environments as Jupyter kernels so you can switch between them within a single JupyterLab session:
+**Step 7:** Register the environments as Jupyter kernels so you can switch between them within a single JupyterLab session:
 
 ```
+conda activate che155-core
+python -m ipykernel install --user --name che155-core --display-name "Python (CHE 155 Core)"
+
 conda activate che155-quantum
 python -m ipykernel install --user --name che155-quantum --display-name "Python (CHE 155 Quantum)"
 
@@ -245,7 +255,7 @@ You can also use another Linux distribution if you're feeling adventurous. They 
 
 </details><br/>
 
-**Step 2a (optional):** Install the Windows terminal.
+**Step 2 (continued, optional):** Install the Windows terminal.
 
 You can get the Windows terminal from the Microsoft store.
 The Windows terminal allows you to open different command lines (such as Windows Powershell and Ubuntu), but it comes with convenient features such as tabs, a longer scrollback history, cut/paste, customizable colors, etc.
